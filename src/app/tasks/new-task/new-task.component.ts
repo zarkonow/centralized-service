@@ -1,6 +1,6 @@
 import { Component, ElementRef, viewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TaskService } from '../task.service';
+import { TasksService } from '../task.service';
 
 @Component({
   selector: 'app-new-task',
@@ -11,10 +11,10 @@ import { TaskService } from '../task.service';
 })
 export class NewTaskComponent {
   private formEl = viewChild<ElementRef<HTMLFormElement>>('form');
-  private taskService: TaskService
+  private taskService: TasksService
 
 constructor() {
-this.taskService = new TaskService();
+this.taskService = new TasksService();
 }
 
 
